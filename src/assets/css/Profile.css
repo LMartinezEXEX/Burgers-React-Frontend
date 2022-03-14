@@ -1,0 +1,58 @@
+.free-delivery-section {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.3em;
+}
+
+.free-delivery-section button {
+    border: none;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    letter-spacing: .2px;
+    position: relative;
+    display: inline-block;
+}
+
+.free-delivery-section button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: #D94038;
+    transform-origin: bottom left;
+    transition: transform 2s ease-out;
+}
+
+.free-delivery-section button:not([disabled]) {
+    cursor: pointer;
+}
+
+.free-delivery-section button:not([disabled]):after{
+
+    animation: underline 1s linear infinite;
+}
+
+@keyframes underline {
+    to {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 10px #D94038;
+    }
+}
+
+.free-delivery-section button:disabled {
+    cursor:not-allowed;
+}
+
+.free-delivery-progress-bar {
+    width: 5em;
+    margin: 5px;
+}

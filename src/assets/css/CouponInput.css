@@ -1,0 +1,44 @@
+.coupon-form {
+    padding: 0.4em;
+}
+
+.coupon-form > label {
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #a8a4a4;
+
+    padding: 0.8em 0.6em;
+}
+
+.input-container > input[type="text"] {
+    flex-grow: 2;
+    border: none;
+    font-size: 18px;
+
+    box-sizing: border-box;
+}
+
+.input-container > input[type="text"]:focus {
+    outline: none;
+}
+
+.input-container > button {
+    border: none;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: #D94038;
+    text-underline-position: under;
+    font-size: 15px;
+}
+
+.input-container > button:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 1px black;
+}

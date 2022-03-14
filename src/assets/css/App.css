@@ -1,0 +1,65 @@
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5em 0px;
+  background-color: #0B2135;
+}
+
+ul > li {
+  list-style-type: none;
+  background-color: inherit;
+}
+
+li > a {
+  color: #f7f7f7;
+  padding: 0.5em 1.2em;
+  text-decoration: none;
+  text-align: center;
+  background-color: inherit;
+  display: inline-block;
+  position: relative;
+}
+
+li > a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+li:not(.logout) > a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.push {
+  margin-left: auto;
+}
+
+.login {
+  background-color: #0087ca;
+}
+
+.logout {
+  margin-right: 15px;
+  background-color: #D94038;
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}

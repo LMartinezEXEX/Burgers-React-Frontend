@@ -1,0 +1,43 @@
+.name-delete-burger{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em 0em 0 0.2em;
+    max-width: 400px;
+}
+
+.name-delete-burger h5 {
+    font-size: 18px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #D94038;
+}
+
+.name-delete-burger .price {
+    margin-left: auto;
+    padding-right: 0.8em;
+    font-size: 17px;
+    text-shadow: 0px 0px 1px black;
+}
+
+.name-delete-burger .delete-btn {
+    width: 30px;
+    padding: 0.5em 0.4em;
+    border: none;
+}
+
+.name-delete-burger .delete-btn:hover{
+    cursor: pointer;
+}
+
+.undeletable-ingredients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em 0.2em;
+    max-width: 395px;
+}
+
+.undeletable-ingredients > p + p.price {
+    padding-right: 2.9em;
+}

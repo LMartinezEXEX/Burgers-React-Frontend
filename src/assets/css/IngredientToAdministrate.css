@@ -1,0 +1,30 @@
+.ing-to-admin {
+    display: flex;
+    max-width: 400px;
+    margin: 0.4em 0;
+}
+
+.ing-to-admin > h4 {
+    font-size: 15px;
+    color: #555555;
+    text-indent: 10px;
+}
+
+.ing-to-admin .price {
+    margin-left: auto;
+}
+
+.ing-to-admin:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #D94038;
+}
+
+.ing-to-admin button {
+    border: none;
+    margin-left: 3em;
+}
+
+.ing-to-admin button:hover {
+    cursor: pointer;
+}

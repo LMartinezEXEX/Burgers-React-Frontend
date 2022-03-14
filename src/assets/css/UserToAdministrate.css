@@ -1,0 +1,7 @@
+.role-cell {
+    text-align: center;
+}
+
+.role-cell input:hover {
+    cursor: pointer;
+}

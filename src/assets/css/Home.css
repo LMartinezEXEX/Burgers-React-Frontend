@@ -1,0 +1,38 @@
+.orders-section {
+    grid-area: order;
+}
+
+.orders-section > p {
+    padding: 1em 1em 0 1.4em;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.profile-section {
+    grid-area: profile;
+
+    margin-top: 4px;
+    margin-right: 10px;
+    padding: 0.4em;
+    border: 1px solid #a8a4a4;
+}
+
+.cart-section {
+    grid-area: cart;
+
+    margin-right: 10px;
+    border: 1px solid #a8a4a4;
+    border-top: none;
+}
+
+.home-container {
+    display: grid;
+    row-gap: 0px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "order order profile"
+    "order order cart"
+    "order order .";
+}

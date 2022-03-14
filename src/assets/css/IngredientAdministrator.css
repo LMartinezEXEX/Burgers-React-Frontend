@@ -1,0 +1,14 @@
+.ing-adm-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    gap: 3em;
+}
+
+.ing-adm-container .ingredients {
+    flex-grow: 3;
+    min-width: 300px;
+}

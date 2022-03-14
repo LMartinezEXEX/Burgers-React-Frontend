@@ -1,0 +1,45 @@
+.ingredient-form {
+    padding: 1em;
+    border: 1px solid #a8a4a4;
+    min-width: 250px;
+}
+
+.ingredient-form > div {
+    padding: 0.5em;
+}
+
+.ingredient-form > div input[type="text"],
+.ingredient-form > div input[type="number"],
+.ingredient-form select 
+{
+    width: 300px;
+    height: 25px;
+    padding: 0.2em 0.4em;
+    font-size: 15px;
+    border: 1px solid #a8a4a4;
+    appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.ingredient-form select {
+    width: 314px;
+}
+
+.ingredient-form > div input[type="text"]:focus,
+.ingredient-form > div input[type="number"],
+.ingredient-form select:focus 
+{
+    outline: none;
+}
+
+.ingredient-form span {
+    color: #a8a4a4;
+    font-size: 14px;
+}

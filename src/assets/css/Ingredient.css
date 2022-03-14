@@ -1,0 +1,30 @@
+.ingredient-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 395px;
+    padding: 0.1em 0.2em;
+}
+
+.ingredient-card:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #a8a4a4;
+}
+
+.ingredient-card .price {
+    margin-left: auto;
+    padding-right: 1.4em;
+}
+
+.ingredient-card .protein {
+    padding-right: 2.6em;
+}
+
+.ingredient-card .delete-btn {
+    border: none;
+}
+
+.ingredient-card .delete-btn:hover {
+    cursor: pointer;
+}
