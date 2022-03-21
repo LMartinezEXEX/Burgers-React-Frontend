@@ -8,6 +8,8 @@ import { isEmail } from "validator";
 
 import { register } from "../actions/auth";
 
+import '../assets/css/Register.css';
+
 const required = (value) => {
     if (!value) {
         return (
@@ -95,68 +97,61 @@ const Register = () => {
     };
 
     return (
-        <div className="col-md-12">
-            <div className="card card-container">
-                <img
-                    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                    alt="profile-img"
-                    className="profile-img-card"
-                />
-                <Form onSubmit={handleRegister} ref={form}>
-                    {!successful && (
+        <div className="register-container">
+            <Form className="register" onSubmit={handleRegister} ref={form}>
+                {!successful && (
+                    <div>
                         <div>
-                            <div className="form-group">
-                                <label htmlFor="username">Username</label>
-                                <Input 
-                                    type="text"
-                                    className="form-control"
-                                    name="username"
-                                    value={username}
-                                    onChange={onChangeUsername}
-                                    validations={[required, vusername]}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                            <label htmlFor="email">Email</label>
+                            <label className="input-label" htmlFor="username">Username</label>
                             <Input 
                                 type="text"
-                                className="form-control"
-                                name="email"
-                                value={email}
-                                onChange={onChangeEmail}
-                                validations={[required, validEmain]}
+                                className="input-field"
+                                name="username"
+                                value={username}
+                                onChange={onChangeUsername}
+                                validations={[required, vusername]}
                             />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <Input 
-                                    type="password"
-                                    className="form-control"
-                                    name="password"
-                                    value={password}
-                                    onChange={onChangePassword}
-                                    validations={[required, vpassword]}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <button className="btn btn-primary btn-block">Sign Up</button>
-                            </div>
                         </div>
-                    )}
 
-                    {message && (
-                        <div className="form-group">
-                            <div className={successful ? "alert alert-success" : "alert alert-danger"}>
-                                {message}
-                            </div>
+                        <div>
+                        <label className="input-label" htmlFor="email">Email</label>
+                        <Input 
+                            type="text"
+                            className="input-field"
+                            name="email"
+                            value={email}
+                            onChange={onChangeEmail}
+                            validations={[required, validEmain]}
+                        />
                         </div>
-                    )}
-                    <CheckButton style={{display: "none"}} ref={checkBtn} />
-                </Form>
-            </div>
+
+                        <div>
+                            <label className="input-label" htmlFor="password">Password</label>
+                            <Input 
+                                type="password"
+                                className="input-field"
+                                name="password"
+                                value={password}
+                                onChange={onChangePassword}
+                                validations={[required, vpassword]}
+                            />
+                        </div>
+
+                        <div>
+                            <button className="btn-primary">Sign Up</button>
+                        </div>
+                    </div>
+                )}
+
+                {message && (
+                    <div >
+                        <div className={successful ? "alert alert-success" : "alert alert-danger"}>
+                            {message}
+                        </div>
+                    </div>
+                )}
+                <CheckButton style={{display: "none"}} ref={checkBtn} />
+            </Form>
         </div>
     );
 };

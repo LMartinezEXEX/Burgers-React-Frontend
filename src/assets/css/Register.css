@@ -1,0 +1,13 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+
+    padding: 1em;
+}
+
+form.register {
+    background-color: #f7f7f7;
+    border: 1px solid #a8a4a4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+}

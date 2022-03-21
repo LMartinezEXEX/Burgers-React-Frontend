@@ -22,7 +22,6 @@ const NewCouponForm = (props) => {
         e.preventDefault();
 
         coupon_service.generate(discount, availableUntil).then((response) => {
-            console.log(response.data)
             console.log("Coupon generated succesful");
             props.afterSubmit();
         })

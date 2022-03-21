@@ -19,19 +19,6 @@ const Home = () => {
     const {user: currentUser} = useSelector((state) => state.auth);
 
     useEffect(() => {
-        user_service.getPublicContent().then(
-            (response) => {
-                setContent(response.data);
-            },
-            (error) => {
-                const _content = (error.response && error.response.data) ||
-                                    error.message ||
-                                    error.toString();
-
-                setContent(_content);
-            }
-        );
-
         if(currentUser){
             dispatch(getOrders()).then(
                 (response) => {
@@ -50,7 +37,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <section className="orders-section">
-                <p>Ordenes realizadas:</p>
+                <p>Previous orders:</p>
                 {
                     orders.map(order => {
                         return <Order
