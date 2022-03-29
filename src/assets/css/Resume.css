@@ -29,14 +29,16 @@
     border: 1px solid #a8a4a4;
 }
 
-.resume-input input[type="text"] {
+.resume-input input[type="text"],
+.resume-input input[type="number"] {
     height: 30px;
     padding: 0.2em 0.4em;
     margin-bottom: 10px;
     border: 1px solid #a8a4a4;
 }
 
-.resume-input input[type="text"]:focus {
+.resume-input input[type="text"]:focus,
+.resume-input input[type="number"]:focus {
     outline: none;
 }
 

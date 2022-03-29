@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { getBurgers } from "../actions/design";
+import { confirmOrder, getBurgers } from "../actions/design";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -42,6 +42,7 @@ const Resume = (props) => {
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
     const [zip, setZip] = useState("");
+    const [phone, setPhone] = useState("");
 
     const [burgers, setBurgers] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -52,15 +53,13 @@ const Resume = (props) => {
 
     useEffect(() => {
         dispatch(getBurgers()).then(response => {
-                setBurgers(response.data);
+            setBurgers(response);
         });
     },[]);
 
     function removeBurger(index) {
         let clone = [...burgers];
-        console.log("ANTES: ", clone);
         clone.splice(index, 1);
-        console.log("DESPUES: ", clone);
         setBurgers(clone);
     }
 
@@ -84,6 +83,10 @@ const Resume = (props) => {
         const zip = e.target.value;
         setZip(zip);
     };
+    const onChangePhone = (e) => {
+        const phone = e.target.value;
+        setPhone(phone);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -94,15 +97,17 @@ const Resume = (props) => {
 
         if(checkBtn.current.context._errors.length === 0) {
 
-            design_service.confirmOrder(fullName, street, city, state, zip, props.freeDelivery).then((response) => {
-                navigate("/");
-                dispatch(completeOrder())
-                console.log("Order made succesful");
-            })
-            .catch(() => {
-                setLoading(false);
-                console.error("Error: Couldn't complete the order");
-            });
+            dispatch(confirmOrder(fullName, street, city, state, zip, phone, props.freeDelivery)).then(
+                (response) => {
+                    navigate("/");
+                    dispatch(completeOrder());
+                    console.log("Order made succesful");
+                },
+                (error) => {
+                    setLoading(false);
+                    console.error("Error: Couldn't complete the order");
+                }
+            )
         } else {
             setLoading(false);
             console.error("Error: Invalid input in current form");
@@ -190,6 +195,17 @@ const Resume = (props) => {
                             name="zip"
                             value={zip}
                             onChange={onChangeZip}
+                            validations={[required]}
+                        />
+                    </div>
+
+                    <div className="resume-input">
+                        <label htmlFor="phone">PHONE NUMBER</label>
+                        <Input
+                            type="number"
+                            name="phone"
+                            value={phone}
+                            onChange={onChangePhone}
                             validations={[required]}
                         />
                     </div>

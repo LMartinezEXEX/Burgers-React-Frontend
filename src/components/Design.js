@@ -5,7 +5,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
-import { addDesign, getIngredients, confirmOrder, saveTypes } from "../actions/design"
+import { addDesign, getIngredients, confirmOrder, saveTypes, getBurgerSizes, getIngredientsType } from "../actions/design"
 import { useNavigate } from "react-router-dom";
 
 import '../assets/css/Design.css';
@@ -49,11 +49,13 @@ const Design = (props) => {
         dispatch(getIngredients()).then(respone => {
             setIngredients(respone);
         });
-        design_service.getBurgerSizes().then((response) => {
-            setSizes(response.data);
+
+        dispatch(getBurgerSizes()).then(response => {
+            setSizes(response);
         })
-        design_service.getIngredientsType().then((response) => {
-            saveTypes(response.data)
+
+        dispatch(getIngredientsType()).then(response => {
+            saveTypes(response);
         })
     }, []);
 
@@ -113,10 +115,8 @@ const Design = (props) => {
 
         if(checkBtn.current.context._errors.length === 0) {
             dispatch(addDesign(name, size, selectedIngredients.concat(protein)))
-            .then((response) => {
+            .then(() => {
                 console.log("Burger added succesful")
-                
-                dispatch(addBurger(response.data))
                 navigate("/resume");
             })
             .catch((error) => {

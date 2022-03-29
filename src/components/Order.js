@@ -12,7 +12,7 @@ const Order = (props) => {
 
     return (
         <div className="order-card">
-            <h3>{ props.street } - { props.city }</h3>
+            <h3>{ props.street } - { props.city } <span className='order-id'>{ props.id }</span></h3>
             {props.burgers.map(burger => {
                 const sortedElements = sortBurgerElementsForShow(burger.size, burger.ingredients, props.types)
                 return (

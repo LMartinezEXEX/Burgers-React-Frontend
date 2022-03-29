@@ -8,6 +8,7 @@ import { IconContext } from "react-icons";
 import '../assets/css/Ingredient.css';
 import design_service from "../services/design_service";
 import { removeIngredient } from "../actions/cart";
+import { removeBurgerIngredient } from "../actions/design";
 
 const mapStateToProps = state => {
     return {
@@ -25,14 +26,15 @@ const Ingredient = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
 
-        design_service.removeIngredient(props.burgerInOrderId, props.ingredientId).then((response) => {
-            dispatch(removeIngredient(props.burgerInOrderId, response.data))
-            setShow(false);
-            console.log("Ingredient removed successfull!");
-        })
-        .catch(() => {
-            console.error("Error: Couldn't remove the ingredient from the burger.");
-        });
+        dispatch(removeBurgerIngredient(props.burgerInOrderId, props.ingredientId)).then(
+            (response) => {
+                setShow(false);
+                console.log("Ingredient removed successfull!");
+            },
+            (error) => {
+                console.error("Error: Couldn't remove the ingredient from the burger.");
+            }
+        )
     }
 
     return (

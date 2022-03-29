@@ -1,6 +1,7 @@
 .order-card {
     margin: 20px;
     padding: 10px;
+    overflow-wrap: break-word;
     border-radius: 10px;
     font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
     max-width: 400px;
@@ -18,12 +19,18 @@
     font-family: inherit;
 }
 
+.order-card .order-id {
+    float: right;
+    color: #D94038;
+    font-size: 15px;
+}
+
 .burger-name {
     color: #0b2135;
     font-size: 14px;
     font-family: inherit;
     text-decoration: underline;
-    text-decoration-color: #fd4f57;
+    text-decoration-color: #D94038;
 }
 
 .order-card li {

@@ -48,7 +48,6 @@ form.login {
 
 .alert-danger {
     display: block;
-    width: 240px;
     overflow: hidden;
     padding: 0.3em;
     background-color: #f44336;

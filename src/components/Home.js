@@ -39,13 +39,13 @@ const Home = () => {
             <section className="orders-section">
                 <p>Previous orders:</p>
                 {
-                    orders.map(order => {
-                        return <Order
-                                street={order.street}
-                                city={order.city} 
-                                name={order.name} 
-                                burgers={order.burgers}
-                                />
+                    [...orders].reverse().map(order => {
+                            return <Order
+                                    id={order.id}
+                                    street={order.street}
+                                    city={order.city}
+                                    burgers={order.burgers}
+                                    />
                     })
                 }
             </section>
@@ -53,7 +53,7 @@ const Home = () => {
                 <Profile />
             </section>
             <section className="cart-section">
-                <CartBilling parent='Home' subtotal={ 100 }/>
+                <CartBilling parent='Home'/>
             </section>
         </div>
     );

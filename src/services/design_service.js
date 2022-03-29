@@ -30,13 +30,14 @@ const getBurgers = () => {
     return axios.get(ORDER_URL + "burgers", { headers: authHeader(), withCredentials:true });
 };
 
-const confirmOrder = (name, street, city, state, zip, freeDelivery) => {
+const confirmOrder = (name, street, city, state, zip, phone, freeDelivery) => {
     return axios.post(ORDER_URL + "complete", {
         name: name,
         street: street,
         city: city,
         state: state,
         zip: zip,
+        phone: phone,
         freeDelivery: freeDelivery
     }, { headers: authHeader(), withCredentials:true });
 };

@@ -54,7 +54,7 @@ const Login = (props) => {
             dispatch(login(username, password))
             .then(() => {
             })
-            .catch(() => {
+            .catch((error) => {
                 setLoading(false);
             });
         } else {

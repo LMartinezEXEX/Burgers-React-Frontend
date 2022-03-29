@@ -7,8 +7,9 @@ import { IconContext } from "react-icons";
 
 import '../assets/css/Burger.css'
 import design_service from "../services/design_service";
-import { removeBurger } from "../actions/cart";
 import { sortBurgerElementsForShow } from "../helpers/sorters";
+import { removeDesign } from "../actions/design";
+import { removeBurger } from "../actions/cart";
 
 const mapStateToProps = state => {
     return {
@@ -70,16 +71,17 @@ const Burger = (props) => {
     const handleDeleteBurger = (e) => {
         e.preventDefault();
 
-        design_service.removeBurger(props.burgerInOrderId).then((response) => {
-            setShow(false);
-            props.removeItem(props.index);
-
-            dispatch(removeBurger(response.data));
-            console.log("Burger removed successfull!");
-        })
-        .catch(() => {
-            console.error("Error: Couldn't remove burger from current order")
-        })
+        dispatch(removeDesign(props.burgerInOrderId)).then(
+            (response) => {
+                setShow(false);
+                props.removeItem(props.index);
+                dispatch(removeBurger(response));
+                console.log("Burger removed successfull!");
+            },
+            (error) => {
+                console.error("Error: Couldn't remove burger from current order");
+            }
+        )
     };
     
     return (
