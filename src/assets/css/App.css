@@ -4,7 +4,7 @@ nav > ul {
   align-items: center;
   justify-content: flex-start;
   padding: 0.5em 0px;
-  background-color: #0B2135;
+  background-color: #111f28;
 }
 
 ul > li {
@@ -13,7 +13,7 @@ ul > li {
 }
 
 li > a {
-  color: #f7f7f7;
+  color: #afb9c5;
   padding: 0.5em 1.2em;
   text-decoration: none;
   text-align: center;
@@ -30,7 +30,7 @@ li > a:after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: #afb9c5;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -46,7 +46,7 @@ li:not(.logout) > a:hover:after{
 }
 
 .login {
-  background-color: #0087ca;
+  background-color: #484e52;
 }
 
 .logout {

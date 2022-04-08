@@ -85,55 +85,58 @@ const NewIngredientForm = (props) => {
     }
 
     return (
-        <Form className="ingredient-form" onSubmit={handleSubmit} ref={form}>
-            <div>
-                <label htmlFor="name">NAME</label>
-                <Input 
-                    type="text"
-                    name="name"
-                    value={name}
-                    onChange={onChangeName}
-                    validations={[required]}
-                />
-            </div>
+        <>
+            <h4>NEW INGREDIENT</h4>
+            <Form className="ingredient-form" onSubmit={handleSubmit} ref={form}>
+                <div>
+                    <label htmlFor="name">NAME</label>
+                    <Input 
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={onChangeName}
+                        validations={[required]}
+                    />
+                </div>
 
-            <div>
-                <label htmlFor="description">DESCRIPTION <span>OPTIONAL</span></label>
-                <Input 
-                    type="text"
-                    name="description"
-                    value={description}
-                    onChange={onChangeDescription}
-                    validations={[]}
-                />
-            </div>
+                <div>
+                    <label htmlFor="description">DESCRIPTION <span>OPTIONAL</span></label>
+                    <Input 
+                        type="text"
+                        name="description"
+                        value={description}
+                        onChange={onChangeDescription}
+                        validations={[]}
+                    />
+                </div>
 
-            <div>
-                <label htmlFor="price">PRICE</label>
-                <Input 
-                    type="number"
-                    name="price"
-                    value={price}
-                    onChange={onChangePrice}
-                    validations={[required, validPrice]}
-                />
-            </div>
+                <div>
+                    <label htmlFor="price">PRICE</label>
+                    <Input 
+                        type="number"
+                        name="price"
+                        value={price}
+                        onChange={onChangePrice}
+                        validations={[required, validPrice]}
+                    />
+                </div>
 
-            <div>
-                <select name="type" onChange={onChangeType}>
-                    {
-                        types.map((typeOpt, _) => {
-                            return <option value={typeOpt}>{ typeOpt }</option>
-                        })
-                    }
-                </select>
-            </div>
-            <div>
-                <button className="add-btn">ADD</button>
-            </div>
+                <div>
+                    <select name="type" onChange={onChangeType}>
+                        {
+                            types.map((typeOpt, _) => {
+                                return <option value={typeOpt}>{ typeOpt }</option>
+                            })
+                        }
+                    </select>
+                </div>
+                <div>
+                    <button className="add-btn">ADD</button>
+                </div>
 
-            <CheckButton style={{display: "none"}} ref={checkBtn} />
-        </Form>
+                <CheckButton style={{display: "none"}} ref={checkBtn} />
+            </Form>
+        </>
     );
 };
 

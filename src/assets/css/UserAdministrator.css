@@ -8,7 +8,8 @@
     padding: 0.2em 0.4em;
     margin-bottom: 0.4em;
     font-size: 15px;
-    border: 1px solid #a8a4a4;
+    border: 1px solid #afb9c5;
+    color: #afb9c5;
 }
 
 .users-table-container > input[type="text"]:focus {
@@ -21,8 +22,13 @@
 }
 
 .users-table-container table, th, td {
-    border-bottom: 1px solid #a8a4a4;
+    border-bottom: 1px solid #afb9c5;
     padding: 0.3em 0 0.1em;
+    color: #afb9c5;
+}
+
+.users-table-container th {
+    color: #484e52;
 }
 
 .users-table-container .username , .users-table-container .email {

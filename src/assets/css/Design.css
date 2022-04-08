@@ -3,18 +3,23 @@
     width: 50%;
 }
 
+.name-container  label {
+    color: #484e52;
+}
+
 .name-container input[type="text"] {
     padding: .8em .4em .2em 0;
     width: 250px;
     font-size: 17px;
     border: none;
     border-bottom: 1px solid #D94038;
-    background-color: #F7F7F7 !important;
+    background-color: #060607;
+    color: #afb9c5;
 }
 
 .name-container input:focus {
     outline: none;
-    background-color: #F7F7F7 !important;
+    background-color: #060607;
 }
 
 .type-container,
@@ -25,9 +30,10 @@
 
 .type-container h4,
 .size-container h4 {
-    padding-bottom: 0.4em;
+    padding-bottom: 0.2em;
     margin-bottom: 0.3em;
-    border-bottom: 1px solid #a8a4a4;
+    border-bottom: 1px solid #484e52;
+    color: #484e52;
 }
 
 .ingredient label {
@@ -47,8 +53,9 @@
     text-transform: uppercase;
 }
 
-.ingredient > label {
+.ingredient > label > span:first-of-type{
     padding-left: 1.4em;
+    color: #afb9c5;
 }
 
 .ingredient label > input {
@@ -59,21 +66,25 @@
     width: 100%;
 }
 
+.ingredient .ingredient-price {
+    color: #afb9c5;
+}
+
 .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 15px;
     width: 15px;
-    background-color: #eee;
+    background-color: #afb9c5;
 }
 
 .ingredient > label:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #484e52;
 }
 
 .ingredient input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #D94038;
 }
 
 .checkmark:after {
@@ -106,6 +117,7 @@
     padding: 0.5em 1.2em;
     font-size: 15px;
     text-transform: uppercase;
+    background-color: #111f28;
     border: 1px solid #a8a4a4;
     text-decoration: underline;
     text-decoration-color: #D94038;
@@ -114,5 +126,10 @@
 
 .add-btn:hover {
     cursor: pointer;
-    text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px white;
+}
+
+.add-btn > span {
+    color: #afb9c5;
+    background-color: #111f28;
 }

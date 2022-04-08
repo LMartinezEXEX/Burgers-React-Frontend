@@ -11,4 +11,9 @@
 .ing-adm-container .ingredients {
     flex-grow: 3;
     min-width: 300px;
+    color: #484e52;
+}
+
+.ingredients .type-title {
+    color: #484e52;
 }

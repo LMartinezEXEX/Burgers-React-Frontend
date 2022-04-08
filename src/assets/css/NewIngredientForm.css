@@ -1,11 +1,24 @@
 .ingredient-form {
-    padding: 1em;
-    border: 1px solid #a8a4a4;
+    padding: 0 1em 1em 1em;
+    border: 1px solid #111f28;
+    background-color: #111f28;
     min-width: 250px;
+}
+
+.new-ingredient-form > h4 {
+    padding: 0.5em 1.5em 0;
+    background-color: #111f28;
+    color: #afb9c5;
 }
 
 .ingredient-form > div {
     padding: 0.5em;
+    background-color: #111f28;
+}
+
+.ingredient-form > div > label {
+    color: #afb9c5;
+    background-color: #111f28;
 }
 
 .ingredient-form > div input[type="text"],
@@ -16,7 +29,9 @@
     height: 25px;
     padding: 0.2em 0.4em;
     font-size: 15px;
-    border: 1px solid #a8a4a4;
+    border: 1px solid #afb9c5;
+    background-color: #111f28;
+    color: #afb9c5;
     appearance: none;
 }
 
@@ -40,6 +55,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .ingredient-form span {
-    color: #a8a4a4;
+    color: #060607;
+    background-color: #111f28;
     font-size: 14px;
+}
+
+.ingredient-form .add-btn {
+    background-color: #111f28;
+    color: #afb9c5;
 }

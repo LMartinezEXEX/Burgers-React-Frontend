@@ -6,15 +6,20 @@
     padding: 0.1em 0.2em;
 }
 
+.ingredient-card > p {
+    color: #afb9c5;
+}
+
 .ingredient-card:hover {
     text-decoration: underline;
     text-underline-position: under;
-    text-decoration-color: #a8a4a4;
+    text-decoration-color: #D94038;
 }
 
 .ingredient-card .price {
     margin-left: auto;
-    padding-right: 1.4em;
+    padding-right: 1.7em;
+    color: #afb9c5;
 }
 
 .ingredient-card .protein {
@@ -27,4 +32,8 @@
 
 .ingredient-card .delete-btn:hover {
     cursor: pointer;
+}
+
+.ingredient-card .delete-btn * {
+    stroke: red;
 }

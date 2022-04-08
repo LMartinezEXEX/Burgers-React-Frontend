@@ -6,12 +6,13 @@
 
 .ing-to-admin > h4 {
     font-size: 15px;
-    color: #555555;
+    color: #afb9c5;
     text-indent: 10px;
 }
 
 .ing-to-admin .price {
     margin-left: auto;
+    color: #afb9c5;
 }
 
 .ing-to-admin:hover {
@@ -27,4 +28,8 @@
 
 .ing-to-admin button:hover {
     cursor: pointer;
+}
+
+.ing-to-admin button * {
+    stroke: red;
 }

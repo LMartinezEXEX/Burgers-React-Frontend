@@ -5,13 +5,14 @@
     align-items: flex-start;
 }
 
-
 .right-side > h5 {
     padding: 1em 0;
     font-size: 15px;
+    color: #afb9c5;
 }
 
 .right-side > h5 > a {
+    color: #afb9c5;
     text-transform: uppercase;
     text-decoration-color: #D94038;
     text-underline-position: under;
@@ -22,11 +23,26 @@
     text-shadow: 0px 0px 1px black;
 }
 
+.resume > .Resume > .cart-billing-container {
+    margin-top: 0.8em;
+}
+
 .resume-form {
     width: 200px;
     margin: 15px 20px 15px 20px;
     padding: 1em 1.8em;
-    border: 1px solid #a8a4a4;
+    border: 1px solid #111f28;
+    background-color: #111f28;
+}
+
+.resume-input,
+.resume-input > div {
+    background-color: #111f28;
+}
+
+.resume-input label {
+    color: #afb9c5;
+    background-color: #111f28;
 }
 
 .resume-input input[type="text"],
@@ -34,7 +50,9 @@
     height: 30px;
     padding: 0.2em 0.4em;
     margin-bottom: 10px;
-    border: 1px solid #a8a4a4;
+    border: 1px solid #afb9c5;
+    background-color: #111f28;
+    color: #afb9c5;
 }
 
 .resume-input input[type="text"]:focus,
@@ -43,15 +61,21 @@
 }
 
 .resume-input  button {
-    padding: 0.5em 1.2em;
+    padding: 0.9em 1.2em;
+    margin-top: 1em;
     border: 1px solid #a8a4a4;
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: #D94038;
     font-size: 15px;
+    width: 95%;
 }
 
 .resume-input button:hover {
     cursor: pointer;
-    text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px #afb9c5;
+}
+
+.resume-input button > span {
+    color: #afb9c5;
 }

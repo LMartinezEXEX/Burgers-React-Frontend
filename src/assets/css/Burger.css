@@ -8,6 +8,7 @@
 
 .name-delete-burger h5 {
     font-size: 18px;
+    color: #afb9c5;
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: #D94038;
@@ -15,9 +16,9 @@
 
 .name-delete-burger .price {
     margin-left: auto;
+    color: #afb9c5;
     padding-right: 0.8em;
     font-size: 17px;
-    text-shadow: 0px 0px 1px black;
 }
 
 .name-delete-burger .delete-btn {
@@ -30,6 +31,10 @@
     cursor: pointer;
 }
 
+.name-delete-burger .delete-btn * {
+    stroke: red;
+}
+
 .undeletable-ingredients {
     display: flex;
     justify-content: space-between;
@@ -38,6 +43,7 @@
     max-width: 395px;
 }
 
-.undeletable-ingredients > p + p.price {
+.undeletable-ingredients > p {
     padding-right: 2.9em;
+    color: #afb9c5;
 }

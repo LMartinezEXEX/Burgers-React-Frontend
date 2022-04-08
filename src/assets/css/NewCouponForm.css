@@ -18,6 +18,10 @@
     outline: none;
 }
 
+.coupon-generator-form > div  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .coupon-generator-form  button {
     display: block;
     margin-top: 0.5em;

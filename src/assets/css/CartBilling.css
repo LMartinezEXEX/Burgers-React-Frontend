@@ -1,6 +1,12 @@
+.cart-billing-container * {
+    background-color: #afb9c5;
+}
+
 .cart-billing-container {
     padding: 0.4em;
-    border-bottom: 1px solid #a8a4a4;
+    border-bottom: 3px solid #060607;
+    border-top: 3px solid #060607;
+    background-color: #afb9c5;
 }
 
 .cart-billing-container > div {
@@ -16,7 +22,7 @@
 }
 
 .cart-billing-container p {
-    color:#a8a4a4;
+    color:#484e52;
     font-size: 13px;
 }
 
@@ -35,13 +41,26 @@
 
 .price,
 .total-price {
-    color: #0B2135;
+    color: #060607;
 }
 
 .total > p {
     font-size: 18px;
     font-weight: 500;
-    color: #0B2135;
+    color: #060607;
+}
+
+.cart-billing-container > .coupon > button {
+    border: none;
+    margin-left: 2em;
+}
+
+.cart-billing-container > .coupon > button:hover {
+    cursor: pointer;
+}
+
+.cart-billing-container > .coupon > button * {
+    stroke: red;
 }
 
 .cupon-container {
@@ -86,6 +105,7 @@
     height: 40px;
     position: relative;
     text-align: right;
+    background-color: #afb9c5;
 }
 
 .go-to-resume {
@@ -95,7 +115,8 @@
     right: 5px;
     letter-spacing: 1px;
     text-decoration: none;
-    border: 1px solid #a8a4a4;
+    border: 1px solid #484e52;
+    background-color: #afb9c5;
 
 }
 
